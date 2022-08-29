@@ -37,7 +37,7 @@ export default function ProjectGallery({ projectData, images }) {
             <Link href='/galerie'>
                 <a>Retour à la galerie</a>
             </Link>
-            <h1>Galerie photo du projet "{projectData.title}"</h1>
+            <h1>Galerie photo du projet &quot;{projectData.title}&quot;</h1>
 
             {images.length > 0 ? (
             <>
@@ -54,7 +54,7 @@ export default function ProjectGallery({ projectData, images }) {
             </>
             ) : (
             <>
-                <p>Il n'y a pas encore de photo dans cette galerie.</p>
+                <p>Il n&apos;y a pas encore de photo dans cette galerie.</p>
             </>
             )}
         </>

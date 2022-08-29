@@ -30,7 +30,7 @@ export default function Project({ projectData }) {
     return (
         <>
             <Link href='../..'>
-                <a>Retour à la page d'accueil</a>
+                <a>Retour à la page d&apos;accueil</a>
             </Link>
 
             <h1>{projectData.title}</h1>

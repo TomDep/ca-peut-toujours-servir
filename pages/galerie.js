@@ -17,7 +17,7 @@ export default function Galerie( { projects }) {
     return (
         <>
             <Link href='/'>
-                <a>Retour à l'accueil</a>
+                <a>Retour à l&apos;accueil</a>
             </Link>
 
             <h1>Bienvenu dans la galerie</h1>
