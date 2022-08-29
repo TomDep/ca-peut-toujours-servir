@@ -1,0 +1,149 @@
+$color: #fff;
+
+$height-icon: 1.2em;
+$width-line: 2.5em;
+$height-line: 0.25em;
+
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateY: (
+    $height-icon / 2
+);
+$translateX: 0;
+
+.hamburger-icon {
+    z-index: 100;
+
+    width: $width-line;
+    height: $height-icon;
+    position: relative;
+    display: block;
+
+    text-decoration: none;
+    color: #95a5a6;
+    margin: 0.3em;
+    display: inline-block;
+    
+    .text {
+        display: inline-block;
+
+        position: relative;
+        left: 130%;
+
+        width: 10em;
+
+        &::after {
+            content: 'Menu';
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .text {
+            display: none;
+        }
+    }
+
+    .line {
+        display: block;
+        background: $color;
+        width: $width-line;
+        height: $height-line;
+        position: absolute;
+        left: 0;
+        border-radius: ($height-line / 2);
+        transition: all $transition-time;
+        -webkit-transition: all $transition-time;
+        -moz-transition: all $transition-time;
+
+        &.line-1 {
+            top: 0;
+        }
+
+        &.line-2 {
+            top: 50%;
+        }
+
+        &.line-3 {
+            top: 100%;
+        }
+    }
+
+    &:hover {
+        .line-1 {
+            transform: translateY($height-line / 2 * -1);
+            -webkit-transform: translateY($height-line / 2 * -1);
+            -moz-transform: translateY($height-line / 2 * -1);
+        }
+
+        .line-3 {
+            transform: translateY($height-line / 2);
+            -webkit-transform: translateY($height-line / 2);
+            -moz-transform: translateY($height-line / 2);
+        }
+
+        .text {
+            color: #ffffff;
+        }
+    }
+
+    &.active {
+        .line-1 {
+            transform: translateY($translateY) translateX($translateX) rotate($rotation);
+            -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+            -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+        }
+
+        .line-2 {
+            opacity: 0;
+        }
+
+        .line-3 {
+            transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+            -webkit-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+            -moz-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+        }
+
+        .text::after {
+            content: "Retour à la navigation";
+        }
+    }
+}
+
+.menu-container {
+
+    background: #000000cc;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+    opacity: 0;
+    transition: opacity 1s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        font-size: 3em;
+        color: #fff;
+        text-decoration: none;
+        font-variant: small-caps;
+
+        user-select: none;
+
+        transition: all 0.2s;
+
+        &:hover {
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &.active {
+        opacity: 1;
+    }
+}
