@@ -23,6 +23,62 @@
     }
 }
 
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    85% {
+        transform: rotate(8deg);
+    }
+
+    95% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.contactButton {
+    position: fixed;
+    bottom: 5vh;
+    margin: 5vh;
+    background-color: #216282;
+
+    border: 1px solid white;
+    border-radius: 50%;
+    
+    width: 3em;
+    height: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+
+    svg {
+        animation: wiggle 2.5s infinite;
+        
+        width: 50%;
+        height: 50%;
+
+        color: white;
+    }
+
+    &:hover {
+        svg {
+            animation: none;
+        }
+    }
+}
+
 /* For small screens */
 @media only screen and (max-width: 900px) {
     .main {
