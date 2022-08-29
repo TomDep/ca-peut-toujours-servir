@@ -4,6 +4,7 @@ import { getNews } from "../lib/news";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header"
+import Layout from "../components/layout";
 
 export async function getStaticProps() {
   const projects = getAllProjects();
@@ -21,7 +22,7 @@ export default function Home({ projects, news }) {
   return (
     <>
       <Header></Header>
-      <main>
+      <Layout>
         
         <p>
           Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. 
@@ -66,12 +67,7 @@ export default function Home({ projects, news }) {
               </Link>
             </div>
           ))}
-
-          <h2>Galerie</h2>
-          <Link href='/galerie'>
-            <a>Accéder à la galerie</a>
-          </Link>
-      </main>
+      </Layout>
     </>
   )
 }
