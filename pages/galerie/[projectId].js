@@ -1,9 +1,9 @@
-import { getAllProjectsIds, getProjectData } from "../../lib/projects";
+import { getProjectsIds, getProjectData } from "../../lib/projects";
 import { getProjectImages } from "../../lib/gallery";
 import Link from "next/link";
 
 export async function getStaticPaths() {
-    const projectsIds = getAllProjectsIds();
+    const projectsIds = getProjectsIds();
 
     const paths = projectsIds.map((projectId) => {
         return {
