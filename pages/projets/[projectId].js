@@ -1,5 +1,9 @@
 import { getProjectData, getProjectsIds } from "../../lib/projects";
 import Link from "next/link";
+import Header from "../../components/header";
+import Layout from "../../components/layout";
+
+import styles from "../../styles/[projectId].module.scss";
 
 export async function getStaticPaths() {
     const ids = getProjectsIds();
@@ -29,15 +33,27 @@ export async function getStaticProps({ params }) {
 export default function Project({ projectData }) {
     return (
         <>
-            <Link href='../..'>
-                <a>Retour à la page d&apos;accueil</a>
-            </Link>
+            <Header></Header>
+            <Layout>
+                <div className={styles.head}>
+                    <h1>{projectData.name}</h1>
+                    <p>{projectData.description}</p>
+                </div>
 
-            <h1>{projectData.title}</h1>
+                <p className={styles.infos}>
+                {projectData.infos.map((info, index) => (
+                    <span key={index}>{info}</span>
+                ))}
+                </p>
 
-            {projectData.id}
+                <p className={styles.credits}>
+                    {projectData.credits.map((credit, index) => (
+                        <span key={index}>{credit}</span>
+                    ))}
+                </p>
 
-            <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}></div>
+                <div className={styles.container} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}></div>
+            </Layout>
         </>
     )
 }
