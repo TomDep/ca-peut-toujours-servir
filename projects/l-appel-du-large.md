@@ -1,12 +1,10 @@
----
-title: "L'appel du large"
-date: "2022-08-24"
-illustration: "galerie/l-appel-du-large/illustration.jpg"
-description: [
-    "La mer s’est enveloppée d’une parure de plastique, mais les sons emblématiques demeurent : l’éclat des vagues sur les rochers, l’effervescence de l’écume sur le rivage, le craquement d’une lame de fond au cœur de la tempête. L’Appel Du Large est l’exploration d’un univers marin imaginaire créé à partir du plastique. La matière et les objets en sont les protagonistes ; ils sont mis en jeu aussi bien de manière sonore que visuelle.",
-    "Le plateau tout entier devient une marionnette mécanique afin que les deux bruiteurs/manipulateurs guident le public au delà du rivage, en pleine mer ou dans les fonds marins. Les spectateurs sont placés au centre du dipositif afin d’apprécier au mieux ce microcosme."
-]
----
+# NOTE D'INTENTION
 
-# Description
+A l’origine de ce projet, il y a le désir de placer au centre du théâtre d’objets des outils de création sonore. Le bruitage est un incontournable quand il s’agit de manipuler de la matière pour créer des sons. Dans L’Appel Du Large, la présence de l’objet m’intéresse autant que le son qu’il produit. Que reste-t il des objets une fois qu’ils ont été vidés de leurs sons ? Comment servent-ils la dramaturgie une fois sortis des mains du bruiteur ? Peuvent-ils sonner sans bruiteur ?
 
+Des moteurs d’essuie-glaces et de lève-vitres récupérés sur des voitures permettent aux objets de prendre une forme d’autonomie. Leur mise en mouvement indépendante du manipulateur s’incrit dans une recherche de nouvelles matières sonores. Cela permet de confronter la machine à l’objet, éprouver sa résistance, son usure, sa taille et sa matière. Le traitement destructif que la machine fait subir à l’objet est dépendant de la qualité de ce dernier car il existe un rapport physique entre les deux.
+
+Les objets dont il est question sont issus de la récupération. Ils ont été choisis pour leurs singularités physiques. J’ai décidé de faire abstraction du sens qu’ils portaient pour me concentrer sur l’objet en tant que phénomène de texture, de forme et de matière. Ayant grandi au bord de la mer il m’a paru naturel de travailler autour de cet univers. C’est un paysage qui revêt de multiples facettes et qui a toujours été une grande source d’inspiration. La mer met nos sens en
+éveil aussi bien de manière sonore que visuelle. De plus, le travail avec des matières plastiques est une occasion de la raconter de manière engagée. Nous avons collectivement fait le choix de parler de la pollution de façon implicite afin de sortir du militantisme frontal. Nous évitons ainsi de casser le potentiel poétique de l’océan tout en éveillant chez le spectateur une réflexion sur ce thème.
+
+*Jean Gueudré*
