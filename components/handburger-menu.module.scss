@@ -129,7 +129,7 @@ $translateX: 0;
     align-items: center;
 
     a {
-        font-size: 3em;
+        font-size: min(10vw, 3em);
         color: #fff;
         text-decoration: none;
         font-variant: small-caps;
