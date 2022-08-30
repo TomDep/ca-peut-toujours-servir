@@ -1,0 +1,24 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh;
+
+    a {
+        font-size: min(10vw, 3em);
+        color: #fff;
+        text-decoration: none;
+        font-variant: small-caps;
+
+        user-select: none;
+
+        transition: all 0.2s;
+
+        &:hover {
+            letter-spacing: 0.05em;
+        }
+    }
+}
