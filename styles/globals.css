@@ -12,3 +12,7 @@ h1::selection, h2::selection, h3::selection {
   color: #216282;
   background-color: white;
 }
+
+a {
+  color: #216282;
+}
