@@ -1,4 +1,4 @@
-import { getAllProjects } from "../lib/projects"
+import { getProjectsProperties } from "../lib/projects"
 import { getNews } from "../lib/news";
 
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Header from "../components/header"
 import Layout from "../components/layout";
 
 export async function getStaticProps() {
-  const projects = getAllProjects();
+  const projects = getProjectsProperties();
   const news = getNews();
 
   return {
@@ -22,7 +22,7 @@ export default function Home({ projects, news }) {
   return (
     <>
       <Header></Header>
-      <Layout>
+      <Layout home>
         
         <p>
           Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. 
@@ -42,9 +42,9 @@ export default function Home({ projects, news }) {
         
 
         <h2>Projets</h2>
-          {projects.map(({ id, title, description, illustration }) => (
+          {projects.map(({ id, name, description, illustration }) => (
             <div key={id}>
-              <h3>{title}</h3>
+              <h3>{name}</h3>
 
               {/* Illustration image */
               illustration ? (
