@@ -76,6 +76,20 @@
     }
 }
 
+.resources {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    padding-left: 65%;
+
+    margin-top: 5em;
+
+    a {
+        text-decoration: none;
+    }
+}
+
 
 @media screen and (max-width: $mediumMinScreenWidth) {
     .container div {

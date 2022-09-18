@@ -4,6 +4,7 @@ import Layout from "@/components/layout";
 
 import styles from "@/styles/[projectId].module.scss";
 import CustomHead from "@/components/customHead";
+import Link from "next/link";
 
 export async function getStaticPaths() {
     const ids = getProjectsIds();
@@ -56,6 +57,23 @@ export default function Project({ projectData, projects }) {
                 </div>
 
                 <div className={styles.container} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}></div>
+
+                <div className={styles.resources}>
+
+                    {(projectData.productionFile) && (
+                    <a target="_blank" className="see-more" href={projectData.productionFile}>
+                        Télécharger le dossier de production
+                    </a>
+                    )}
+
+                    <Link href={"/agenda"}>
+                        <a className="see-more">Voir les prochaines dates</a>
+                    </Link>
+
+                    <Link href={"/projets"}>
+                        <a className="see-more">Découvrir les autres créations</a>
+                    </Link>
+                </div>
             </Layout>
         </>
     )
