@@ -13,8 +13,6 @@ export async function getStaticProps({ params }) {
     const projects = getProjectsProperties();
     const news = getNews();
 
-    console.log(news)
-
     return {
         props: {
             projects,
