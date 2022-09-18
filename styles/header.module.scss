@@ -1,15 +1,24 @@
 
 .header {
     width: 100vw;
-    height: 3em;
+    height: $headerHeight;
+
+    position: fixed;
+    top: 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 5em 3em;
+    padding: 1em 3em;
 
     transition: padding 0.2s;
+
+    z-index: 500;
+
+    h1 {
+        margin: 0;
+    }
 }
 
 .title {
@@ -20,16 +29,15 @@
 
     font-size: min(4vw, 2em);
 
-    margin-left: 2em;
-
     a {
         color: #000;
         text-decoration: none;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: $smallMinScreenWidth) {
     .header {
-        padding: 3em 2em 2em 1em;
+        background-color: $backgroundColor;
+        padding: $smallScreenMargin;
     }
 }

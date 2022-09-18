@@ -1,72 +1,49 @@
 import { getProjectsProperties } from "../lib/projects"
-import { getNews } from "../lib/news";
+
+import styles from "../styles/home.module.scss";
 
 import Link from "next/link";
-import Image from "next/image";
 import Header from "../components/header"
 import Layout from "../components/layout";
+import ProjectOverview from "../components/project-overview";
+import CustomHead from "../components/customHead.js";
 
 export async function getStaticProps() {
   const projects = getProjectsProperties();
-  const news = getNews();
 
   return {
     props : {
-      projects,
-      news
+      projects
     }
   };
 }
 
-export default function Home({ projects, news }) {
+export default function Home({ projects }) {
   return (
     <>
-      <Header></Header>
+      <CustomHead title="Ça peut toujours servir"></CustomHead>
+
+      <Header projects={projects}></Header>
       <Layout home>
         
-        <p>
-          Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. 
-          Bienvenue sur notre site concu de nos petites mains pour vous renseigner sur nos spectacles concus de nos petites mains aussi! 
-        </p>
-        
-        { news.length > 0 && (
-          <section>
-            <h2>Actualités</h2>
-            <ul>
-              {news.map((n, index) => (
-                <li key={index}>{n}</li>
-              ))}
-            </ul>
-          </section>
-          )}
-        
+        <section className={styles.company}>
+          <p>
+            Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. 
+            Bienvenue sur notre site concu de nos petites mains pour vous renseigner sur nos spectacles concus de nos petites mains aussi! 
+          </p>
 
-        <h2>Projets</h2>
-          {projects.map(({ id, name, description, illustration }) => (
-            <div key={id}>
-              <h3>{name}</h3>
+          <Link href='./compagnie'>
+            <a className="see-more">Découvrir la compagnie</a>
+          </Link>
+        </section>
+                
+        <section className={styles.container}>
+            <ProjectOverview path={'./agenda'} name={'Agenda'} titleImage={'./res/agendaTitle.png'} illustration={'./res/agenda.jpg'} linkText={'Voir les prochaines dates'}></ProjectOverview>
 
-              {/* Illustration image */
-              illustration ? (
-                  <Image src={`/${illustration}`} width="400" height="400"></Image>
-              ) : (
-                <></>
-              )}
-              
-              {/* Description */}
-              {Array.isArray(description) ? (
-                description.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))
-              ) : (
-                <p>{description}</p>
-              )}
-
-              <Link href={`/projets/${id}`}>
-                <a>En savoir plus</a>
-              </Link>
-            </div>
-          ))}
+            {projects.map(({ id, name, titleImage, illustration }, index) => (
+              <ProjectOverview key={index} path={'./projets/' + id} name={name} titleImage={titleImage} illustration={illustration}></ProjectOverview>
+            ))}
+        </section>
       </Layout>
     </>
   )

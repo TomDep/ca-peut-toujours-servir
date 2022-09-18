@@ -1,3 +1,20 @@
+:::section
+
+# INFOS PRATIQUES
+
+Création 2023   
+Tout publique   
+Durée éstimée : 40 minutes   
+
+# DISTRIBUTION
+
+Lumières et jeu : Louis De Pasquale   
+Synthétiseurs et création sonore : Jean Gueudré  
+Guitare et création sonore : Théo Rodriguez-Noury   
+
+:::
+:::section
+
 # RÉSUMÉ
 
 Ce projet prend la forme d’une performance musicale improvisée, le bruit des lampes est accompagné de guitare et de synthétiseurs modulaires analogiques. Les sonorités de ces instruments parfois se confondent, parfois se complètent. Cela peut aller d’ambiances «Noise» ou «Drone» à des sonorité «Techno Industriel» ou «Acid». Le public peut se laisser transporter à travers des styles musicaux éclectiques.
@@ -5,6 +22,9 @@ Ce projet prend la forme d’une performance musicale improvisée, le bruit des 
 À l’aide de capteurs électromagnétiques, les perturbations du champ électrique sont amplifiées. Ainsi lorsqu’une lampe s’allume cela produit un son percussif. Grâce à des séquences programmées en direct, il devient possible de composer avec l’allumage des lampes.
 
 /galerie/LFO/illustration.jpg
+
+:::
+:::section
 
 # NOTE D'INTENTION
 
@@ -19,3 +39,8 @@ Pour aborder ce sujet et l’explorer plus en profondeur, j’ai choisi de colla
 
 *Louis de Pasquale*
 
+:::
+
+# SOUTIENS
+
+Avec le soutien de Ecole Nationale des Arts et Techniques du Théâtre.

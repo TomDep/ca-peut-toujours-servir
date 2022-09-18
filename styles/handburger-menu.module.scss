@@ -1,4 +1,4 @@
-$color: #fff;
+$color: $textColor;
 
 $height-icon: 1.2em;
 $width-line: 2.5em;
@@ -16,7 +16,10 @@ $translateX: 0;
 
     width: $width-line;
     height: $height-icon;
+
     position: relative;
+    top: 0;
+    
     display: block;
 
     text-decoration: none;
@@ -37,7 +40,7 @@ $translateX: 0;
         }
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: calc($mediumMinScreenWidth - 10em)) and (min-width: $smallMinScreenWidth) {
         .text {
             display: none;
         }
@@ -69,6 +72,8 @@ $translateX: 0;
     }
 
     &:hover {
+        cursor: pointer;
+
         .line-1 {
             transform: translateY($height-line / 2 * -1);
             -webkit-transform: translateY($height-line / 2 * -1);
@@ -140,10 +145,20 @@ $translateX: 0;
 
         &:hover {
             letter-spacing: 0.05em;
+            cursor: pointer;
         }
     }
 
     &.active {
         opacity: 1;
+    }
+}
+
+.hideProjects {
+    margin-top: 2em;
+    text-decoration: underline;
+
+    &:hover {
+        cursor: pointer;
     }
 }

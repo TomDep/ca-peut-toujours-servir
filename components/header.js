@@ -1,24 +1,14 @@
-import Link from "next/link"
-import HandburgerMenu from "./handburger-menu"
+import Link from "next/link";
+import HandburgerMenu from "./handburger-menu";
 
-import styles from "./header.module.scss"
+import styles from "../styles/header.module.scss";
 
-export default function Header() {
+export default function Header({ projects }) {
     return (
         <header className={styles.header}>
             {/* Menu */}
             <nav>
-                <HandburgerMenu>
-                    <Link href="/compagnie">
-                        <a>La compagnie</a>
-                    </Link>
-                    <Link href="/projets">
-                        <a>Projets</a>
-                    </Link>
-                    <Link href="/galerie">
-                        <a>Galerie photo</a>
-                    </Link>
-                </HandburgerMenu>
+                <HandburgerMenu projects={projects}></HandburgerMenu>
             </nav>
 
             <h1 className={styles.title}>

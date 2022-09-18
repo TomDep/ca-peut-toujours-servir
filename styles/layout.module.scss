@@ -1,13 +1,12 @@
-
 .main {
-    margin: -1.5em 20vw;
+    margin: calc($headerHeight + 5em) calc((100vw - $layoutWidth) / 2);
 
     transition: all 0.3s;
 }
 
 .link {
     position: sticky;
-    top: 3em;
+    top: calc($headerHeight + 3em);
     
     font-size: 1em;
     margin-left: 3em;
@@ -82,9 +81,10 @@
 }
 
 /* For small screens */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: $smallMinScreenWidth) {
     .main {
-            margin: 1em 1em;
+        margin: $smallScreenMargin;
+        margin-top: $headerHeight;
     }
 
     .link {
@@ -98,11 +98,11 @@
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: $mediumMinScreenWidth) {
 
     .link {
-        position: inherit;
-        top: 0;
+        position: absolute;
+        top: 5em;
         margin-left: 1em;
     }
 }

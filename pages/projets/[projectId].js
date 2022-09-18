@@ -1,9 +1,9 @@
-import { getProjectData, getProjectsIds } from "../../lib/projects";
-import Link from "next/link";
-import Header from "../../components/header";
-import Layout from "../../components/layout";
+import { getProjectData, getProjectsIds, getProjectsProperties } from "@/lib/projects";
+import Header from "@/components/header";
+import Layout from "@/components/layout";
 
-import styles from "../../styles/[projectId].module.scss";
+import styles from "@/styles/[projectId].module.scss";
+import CustomHead from "@/components/customHead";
 
 export async function getStaticPaths() {
     const ids = getProjectsIds();
@@ -22,35 +22,38 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+    
+
     const projectData = await getProjectData(params.projectId);
+    const projects = getProjectsProperties();
+
     return {
         props: {
+            projects,
             projectData
         }
     };
 }
 
-export default function Project({ projectData }) {
+export default function Project({ projectData, projects }) {
     return (
         <>
-            <Header></Header>
+            <CustomHead>{projectData.name}</CustomHead>
+            <Header projects={projects}></Header>
             <Layout>
                 <div className={styles.head}>
-                    <h1>{projectData.name}</h1>
-                    <p>{projectData.description}</p>
+                    <img src={'../../' + projectData.titleImage} />
+                    {
+                        Array.isArray(projectData.description) ? (
+                            projectData.description.map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            ))
+                        ) : (
+                            <p>{projectData.description}</p>
+                        )
+                    }
+                    
                 </div>
-
-                <p className={styles.infos}>
-                {projectData.infos.map((info, index) => (
-                    <span key={index}>{info}</span>
-                ))}
-                </p>
-
-                <p className={styles.credits}>
-                    {projectData.credits.map((credit, index) => (
-                        <span key={index}>{credit}</span>
-                    ))}
-                </p>
 
                 <div className={styles.container} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}></div>
             </Layout>

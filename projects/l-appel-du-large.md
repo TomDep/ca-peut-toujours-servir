@@ -1,3 +1,5 @@
+:::section
+
 # NOTE D'INTENTION
 
 A l’origine de ce projet, il y a le désir de placer au centre du théâtre d’objets des outils de création sonore. Le bruitage est un incontournable quand il s’agit de manipuler de la matière pour créer des sons. Dans L’Appel Du Large, la présence de l’objet m’intéresse autant que le son qu’il produit. Que reste-t il des objets une fois qu’ils ont été vidés de leurs sons ? Comment servent-ils la dramaturgie une fois sortis des mains du bruiteur ? Peuvent-ils sonner sans bruiteur ?
@@ -8,3 +10,5 @@ Les objets dont il est question sont issus de la récupération. Ils ont été c
 éveil aussi bien de manière sonore que visuelle. De plus, le travail avec des matières plastiques est une occasion de la raconter de manière engagée. Nous avons collectivement fait le choix de parler de la pollution de façon implicite afin de sortir du militantisme frontal. Nous évitons ainsi de casser le potentiel poétique de l’océan tout en éveillant chez le spectateur une réflexion sur ce thème.
 
 *Jean Gueudré*
+
+:::

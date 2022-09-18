@@ -1,14 +1,33 @@
-import styles from './handburger-menu.module.scss';
+import styles from '@/styles/handburger-menu.module.scss';
 
+import { showLoadingScreen } from '@/lib/utility.js';
 import { useState } from 'react';
 
-export default function HandburgerMenu({ children }) {
+import Link from 'next/link';
+
+export default function HandburgerMenu({ projects }) {
 
     const [activated, setActivated] = useState(false);
+    const [projectsVisible, setProjectsVisible] = useState(false);
+
+    function toggleProjects(projectsVisible) {
+
+        projectsVisible = !projectsVisible;
+        return projectsVisible;
+    }
+
+    function toggleMenuActivated(activated) {
+        activated = !activated;
+        if (!activated) {
+            setProjectsVisible(() => false);
+        }
+        return activated;
+    }
 
     return (
         <>
-            <a className={`${styles["hamburger-icon"]}  ${activated ? styles["active"] : ""}`} href="#" title="Menu" onClick={() => setActivated(activated => !activated)}>
+            <a className={`${styles["hamburger-icon"]}  ${activated ? styles["active"] : ""}`} title="Menu" 
+                onClick={() => setActivated(toggleMenuActivated)}>
                 <span className={`${styles["line"]} ${styles["line-1"]}`}></span>
                 <span className={`${styles["line"]} ${styles["line-2"]}`}></span>
                 <span className={`${styles["line"]} ${styles["line-3"]}`}></span>
@@ -18,7 +37,39 @@ export default function HandburgerMenu({ children }) {
 
             {activated && (
                 <div className={`${styles["menu-container"]} ${activated ? styles["active"] : ""}`}>
-                    {children}
+                    {!projectsVisible ? (
+                        <>
+                            <Link href="/">
+                                <a>Accueil</a>
+                            </Link>
+
+                            <Link href="/compagnie">
+                                <a>La compagnie</a>
+                            </Link>
+                            
+                            <a onClick={() => setProjectsVisible(toggleProjects)}>Projets</a>
+                            
+                            <Link href="/galerie">
+                                <a>Galerie photo</a>
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            {(!projects) ? (<p>There is no projects</p>) : (
+                                projects.map((project, index) => (
+                                    <Link key={index} href={'/projets/' + project.id} passHref={false}>
+                                        <a onClick={() => {
+                                            showLoadingScreen();
+                                            setActivated(toggleMenuActivated);
+                                        }}
+                                        className={styles.projectName}>{project.name}</a>
+                                    </Link>
+                                ))
+                            )}
+
+                            <span className={styles.hideProjects} onClick={() => setProjectsVisible(toggleProjects)}>Retour au menu</span>
+                        </>
+                    )}
                 </div>
             )}
         </>

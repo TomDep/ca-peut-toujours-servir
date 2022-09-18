@@ -1,0 +1,36 @@
+.company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    column-gap: 2em;
+
+    margin-bottom: 2em;
+
+    p {
+        margin: 0;
+        min-width: 15em;
+        max-width: 40em;
+    }
+
+    a {
+        min-width: 13em;
+
+        align-self: flex-end;
+        text-align: right;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    
+    column-gap: $projectImageGap;
+    row-gap: $projectImageGap;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    transition: all 0.2s;
+}

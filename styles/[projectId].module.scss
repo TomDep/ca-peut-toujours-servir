@@ -1,17 +1,11 @@
 
 .head {
 
-    h1 {
-        padding-bottom: 0.5em;
-        border-bottom: 1px solid #ffffff;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ffffff;
 
-        margin-bottom: 12px;
-
-        font-size: max(2em, 4vw);
-    }
-
-    width: 85%;
-    margin: 5em auto;
+    width: 95%;
+    margin: 1em auto 3em auto;
 }
 
 .infos, .credits {
@@ -21,15 +15,18 @@
 }
 
 .container {
-    margin: 5em auto;
 
-    columns: 3em 2;
-    column-gap: 3em;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+            font-size: max(2vw, 1.2em);
+            font-variant: small-caps;
     
-    p {
-        text-align: justify;
-        text-justify: inter-word;
+            padding-bottom: 0.78em;
+    }
 
+    p {
         a {
             margin: auto;
             max-width: 100%;
@@ -43,17 +40,50 @@
         }
     }
 
-    h1 {
-        font-size: max(2vw, 1.2em);
-        font-variant: small-caps;
+    div {
+        column-count: 2;
+        column-gap: 3em;
 
-        padding-bottom: 0.5em;
-        border-bottom: 1px solid #ffffff;        
+        margin-bottom: 5vw;
+        border-bottom: 1px solid darken($textColor, 90%);
+        padding-bottom: 5vw;
+
+        p {
+            a {
+                margin: auto;
+                max-width: 100%;
+                display: inline-block;
+
+                img {
+                    margin: auto;
+                    max-width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        h1 {
+            font-size: max(2vw, 1.2em);
+            font-variant: small-caps;
+
+            padding-bottom: 0.78em;    
+        }
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .container {
+
+@media screen and (max-width: $mediumMinScreenWidth) {
+    .container div {
         column-count: 1;
+    }
+
+    .head {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $smallMinScreenWidth) {
+    .container div p {
+        text-align: justify;
     }
 }
