@@ -5,7 +5,12 @@
     border-bottom: 1px solid #ffffff;
 
     width: 95%;
-    margin: 1em auto 3em auto;
+    margin: 8em auto 3em auto;
+
+    img {
+        max-width: 100%;
+        object-fit: contain;
+    }
 }
 
 .infos, .credits {
