@@ -5,8 +5,8 @@
 }
 
 .link {
-    position: sticky;
-    top: calc($headerHeight + 3em);
+    position: fixed;
+    top: calc($headerHeight + 1em);
     
     font-size: 1em;
     margin-left: 3em;
