@@ -62,7 +62,7 @@ export default function Project({ projectData, projects }) {
                 <div className={styles.resources}>
 
                     {(projectData.productionFile) && (
-                    <a target="_blank" className="see-more" href={projectData.productionFile}>
+                    <a target="_blank" rel="noreferrer" className="see-more" href={projectData.productionFile}>
                         Télécharger le dossier de production
                     </a>
                     )}
