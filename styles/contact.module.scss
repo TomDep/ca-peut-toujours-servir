@@ -1,0 +1,11 @@
+.list {
+    a {
+        color: $textColor;
+        text-decoration: none;
+
+        &:hover {
+            color: $textColor;
+            filter: brightness(60%);
+        }
+    }
+}
