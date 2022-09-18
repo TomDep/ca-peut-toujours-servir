@@ -5,6 +5,7 @@ import Layout from "@/components/layout";
 import styles from "@/styles/[projectId].module.scss";
 import CustomHead from "@/components/customHead";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export async function getStaticPaths() {
     const ids = getProjectsIds();
@@ -75,6 +76,7 @@ export default function Project({ projectData, projects }) {
                     </Link>
                 </div>
             </Layout>
+            <Footer></Footer>
         </>
     )
 }

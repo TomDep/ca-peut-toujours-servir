@@ -2,6 +2,8 @@
     margin: calc($headerHeight + 5em) calc((100vw - $layoutWidth) / 2);
 
     transition: all 0.3s;
+
+    min-height: 70vh;
 }
 
 .link {

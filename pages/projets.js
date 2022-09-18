@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Link from "next/link";
 import Header from "../components/header";
 import Layout from "../components/layout";
@@ -38,6 +39,7 @@ export default function Projets({ projects }) {
                     ))}
                 </div> 
             </Layout>
+            <Footer></Footer>
         </>
     );
 }

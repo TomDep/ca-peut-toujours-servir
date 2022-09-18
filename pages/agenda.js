@@ -1,4 +1,5 @@
 import CustomHead from "@/components/customHead";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Layout from "@/components/layout";
 import { getNews } from "@/lib/news";
@@ -37,6 +38,8 @@ export default function Agenda({ projects, news }) {
                 {news.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
             </Layout>
+
+            <Footer></Footer>
         </>
     )
 }

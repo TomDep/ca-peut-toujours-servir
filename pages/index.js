@@ -7,6 +7,7 @@ import Header from "../components/header"
 import Layout from "../components/layout";
 import ProjectOverview from "../components/project-overview";
 import CustomHead from "../components/customHead.js";
+import Footer from "@/components/footer";
 
 export async function getStaticProps() {
   const projects = getProjectsProperties();
@@ -45,6 +46,7 @@ export default function Home({ projects }) {
             ))}
         </section>
       </Layout>
+      <Footer></Footer>
     </>
   )
 }

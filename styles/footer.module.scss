@@ -1,0 +1,17 @@
+.footer {
+    position: relative;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 12px;
+
+    border-top: 1px solid $textColor;
+    margin: auto 10vw;
+
+    p {
+        margin-bottom: 5px;
+    }
+}
