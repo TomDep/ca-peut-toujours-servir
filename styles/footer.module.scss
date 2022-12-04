@@ -28,3 +28,10 @@
         margin-left: 5px;
     }
 }
+
+/* For small screens */
+@media only screen and (max-width: $smallMinScreenWidth) {
+    .list {
+        padding-left: 0;
+    }
+}
