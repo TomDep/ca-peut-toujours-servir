@@ -29,7 +29,7 @@ export default function Home({ projects }) {
         
         <section className={styles.company}>
           <p>
-            Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. 
+            Nous sommes la Compagnie «&nbsp;Ça Peut Toujours Servir&nbsp;», une jeune cie Lyonnaise. 
             Bienvenue sur notre site concu de nos petites mains pour vous renseigner sur nos spectacles concus de nos petites mains aussi! 
           </p>
 
