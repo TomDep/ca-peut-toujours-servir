@@ -16,10 +16,6 @@ export default function ProjectOverview({ path, name, illustration, titleImage, 
     return (
         <div className={styles.container} style={{'backgroundImage': 'url(' + illustration + ')'}} onClick={goToProject}>
             <img className={styles.titleImage} src={titleImage}/>
-            <hr></hr>
-            <Link href={path}>
-                {(linkText) ? (<a className="see-more">{linkText}</a>) : (<a className="see-more">En savoir plus</a>)}
-            </Link> 
         </div>
     )
 }
