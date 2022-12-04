@@ -6,6 +6,7 @@ body {
 
   background-color: $backgroundColor;
   color: $textColor;
+  font-family: $font;
 }
 
 p::selection, span::selection, ::selection, 
