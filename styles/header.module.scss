@@ -2,7 +2,8 @@
 .header {
     width: 100vw;
     height: $headerHeight;
-
+    background-color: $backgroundColor;
+    
     position: fixed;
     top: 0;
 
@@ -37,7 +38,6 @@
 
 @media only screen and (max-width: $smallMinScreenWidth) {
     .header {
-        background-color: $backgroundColor;
         padding: $smallScreenMargin;
     }
 }
