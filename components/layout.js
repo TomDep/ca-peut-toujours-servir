@@ -7,7 +7,7 @@ export default function Layout({ children, home }) {
         
         {!home && (
             <Link href='/'>
-                    <a className={styles.link}>🠐 <span>Retour à l’accueil</span></a>
+                    <a className={styles.link}>&#8592; <span>Retour à l’accueil</span></a>
             </Link>
         )}
         
