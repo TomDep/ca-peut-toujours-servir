@@ -40,7 +40,7 @@ export async function getStaticProps({ params }) {
 export default function Project({ projectData, projects }) {
     return (
         <>
-            <CustomHead>{projectData.name}</CustomHead>
+            <CustomHead title={projectData.name}></CustomHead>
             <Header projects={projects}></Header>
             <Layout>
                 <div className={styles.head}>

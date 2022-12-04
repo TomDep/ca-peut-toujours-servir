@@ -1,3 +1,4 @@
+import CustomHead from "@/components/customHead";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Header from "../components/header";
@@ -29,6 +30,7 @@ export async function getStaticProps() {
 export default function Projets({ projects }) {
     return (
         <>
+            <CustomHead title={"Projets"}></CustomHead>
             <Header></Header>
             <Layout>
                 <div className={styles.container}>

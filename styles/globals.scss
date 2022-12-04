@@ -17,6 +17,11 @@ a::selection {
 
 a {
   color: $linkColor;
+
+  &:hover {
+    color: $linkColorHover;
+    filter: brightness(60%);
+  }
 }
 
 /* ----- Classes ----- */
@@ -34,7 +39,7 @@ a {
   }
 
   &:hover {
-    color: $textColor;
+    color: $linkColorHover;
     filter: brightness(60%);
   }
 }

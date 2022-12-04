@@ -53,8 +53,8 @@ export default function HandburgerMenu({ projects }) {
                             
                             <a onClick={() => setProjectsVisible(toggleProjects)}>Projets</a>
                             
-                            <Link href="/contact">
-                                <a>Contact</a>
+                            <Link href="/contacts">
+                                <a>Contacts</a>
                             </Link>
                         </>
                     ) : (

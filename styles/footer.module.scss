@@ -14,4 +14,17 @@
     p {
         margin-bottom: 5px;
     }
+
+    h5 {
+        font-size: $textSize;
+    }
+
+    .list {
+        list-style: none;
+    }
+
+    svg {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 }

@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
 export default function Agenda({ projects, news }) {
     return (
         <>
-            <CustomHead>Agenda</CustomHead>
+            <CustomHead title={"Agenda"}></CustomHead>
             <Header projects={projects}></Header>
 
             <Layout>

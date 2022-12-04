@@ -12,10 +12,12 @@ $layoutWidth: 60vw;
 $projectImageGap: 1em;
 
 /* Theme */
+$textSize: 1em;
 $backgroundColor: #000000;
 
 $textColor: #ffffff;
-$linkColor: #216282;
+$linkColor: #ffffff;
+$linkColorHover: #ffffff;
 
 $selectedBackgroundColor: $textColor;
 $selectedTextColor: $linkColor;

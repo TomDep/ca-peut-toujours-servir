@@ -1,11 +1,21 @@
 .list {
+    list-style: none;
     a {
         color: $textColor;
         text-decoration: none;
+
+        svg {
+            margin-right: 1em;
+        }
+        
 
         &:hover {
             color: $textColor;
             filter: brightness(60%);
         }
     }
+}
+
+.container {
+    padding-top: 3em;
 }

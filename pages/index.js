@@ -22,7 +22,7 @@ export async function getStaticProps() {
 export default function Home({ projects }) {
   return (
     <>
-      <CustomHead title="Ça peut toujours servir"></CustomHead>
+      <CustomHead title="Accueil"></CustomHead>
 
       <Header projects={projects}></Header>
       <Layout home>

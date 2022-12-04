@@ -11,7 +11,7 @@ export default function CustomHead({ title }) {
     return (
         <>
             <Head>
-                <title>{title}</title>
+                <title>{title + " - Ça peut toujours servir"}</title>
 
                 <meta lang="fr"></meta>
                 <meta charSet="utf-8"></meta>

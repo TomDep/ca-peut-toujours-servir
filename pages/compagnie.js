@@ -23,7 +23,7 @@ export async function getStaticProps({ params }) {
 export default function Company({ projects }) {
     return (
         <>
-            <CustomHead>La Compagnie</CustomHead>
+            <CustomHead title={"La Compagnie"}></CustomHead>
             <Header projects={projects}></Header>
 
             <Layout>
