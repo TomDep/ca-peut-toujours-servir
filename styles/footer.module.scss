@@ -21,17 +21,11 @@
 
     .list {
         list-style: none;
+        padding-left: 0;
     }
 
     svg {
         margin-right: 5px;
         margin-left: 5px;
-    }
-}
-
-/* For small screens */
-@media only screen and (max-width: $smallMinScreenWidth) {
-    .list {
-        padding-left: 0;
     }
 }
