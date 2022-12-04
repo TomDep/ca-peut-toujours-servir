@@ -11,17 +11,20 @@ import styles from "@/styles/agenda.module.scss";
 export async function getStaticProps({ params }) {
 
     const projects = getProjectsProperties();
-    const news = getNews();
+    const data = getNews();
+    const news = data.news;
+    const past = data.past;
 
     return {
         props: {
             projects,
-            news
+            news,
+            past
         }
     };
 }
 
-export default function Agenda({ projects, news }) {
+export default function Agenda({ projects, news, past }) {
     return (
         <>
             <CustomHead title={"Agenda"}></CustomHead>
@@ -33,8 +36,16 @@ export default function Agenda({ projects, news }) {
                 <hr />
 
                 <ul className={styles.list}>
-                {news.map((item, index) => <li key={index}>{item}</li>)}
+                {news?.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
+
+                <hr />
+
+                <h2>Événement passés</h2>
+                <ul className={styles.list}>
+                {past?.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+
             </Layout>
 
             <Footer></Footer>
