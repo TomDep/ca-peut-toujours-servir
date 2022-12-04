@@ -16,6 +16,8 @@ export default function CustomHead({ title }) {
                 <meta lang="fr"></meta>
                 <meta charSet="utf-8"></meta>
                 <meta content-type="text/html"></meta>
+
+                <link rel="icon" type="image/x-icon" href="/res/favicon.ico"></link>
             </Head>
 
             <div id='loadingScreen'>
