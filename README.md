@@ -1,6 +1,6 @@
 # Ça peut toujours servir
 
-Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. Bienvenue sur notre site concu de nos petites mains pour vous renseigner sur nos spectacles concus de nos petites mains aussi! [Visiter le site](capeuttoujoursservir.fr)
+Nous sommes la Compagnie « Ça Peut Toujours Servir », une jeune cie Lyonnaise. Bienvenue sur notre site concu de nos petites mains pour vous renseigner sur nos spectacles concus de nos petites mains aussi! [Visiter le site](http://capeuttoujoursservir.fr)
 
 Le code source est accessible et sous licence Libre. [(Voir la licence)](LICENCE)
 
