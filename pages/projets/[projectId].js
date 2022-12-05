@@ -7,6 +7,18 @@ import CustomHead from "@/components/customHead";
 import Link from "next/link";
 import Footer from "@/components/footer";
 
+import fs from 'fs';
+import path from 'path';
+
+import Audio from "@/components/article_components/audio";
+import Image from "@/components/article_components/image";
+import Section from "@/components/article_components/section";
+import Video from "@/components/article_components/video";
+
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
+const components = { Audio, Image, Section, Video }
+
 export async function getStaticPaths() {
     const ids = getProjectsIds();
     const paths = ids.map((id) => {
@@ -29,15 +41,24 @@ export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.projectId);
     const projects = getProjectsProperties();
 
+    // MDX text - can be from a local file, database, anywhere
+    const projectsDirectory = path.join(process.cwd(), 'projects');
+    const fullPath = path.join(projectsDirectory, `${params.projectId}.mdx`);
+    const source = fs.readFileSync(fullPath, 'utf8');
+    
+    //const source = 'Some **mdx** text, with a component <Image src="path/to/image" />'
+    const mdxSource = await serialize(source)
+
     return {
         props: {
             projects,
-            projectData
+            projectData,
+            source : mdxSource
         }
     };
 }
 
-export default function Project({ projectData, projects }) {
+export default function Project({ projectData, projects, source }) {
     return (
         <>
             <CustomHead title={projectData.name}></CustomHead>
@@ -54,13 +75,13 @@ export default function Project({ projectData, projects }) {
                             <p>{projectData.description}</p>
                         )
                     }
-                    
                 </div>
 
-                <div className={styles.container} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}></div>
+                <div className={styles.container}>
+                    <MDXRemote {...source} components={components} />
+                </div>
 
                 <div className={styles.resources}>
-
                     {(projectData.productionFile) && (
                     <a target="_blank" rel="noreferrer" className="see-more" href={projectData.productionFile}>
                         Télécharger le dossier de production

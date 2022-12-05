@@ -45,7 +45,7 @@
         }
     }
 
-    div {
+    section {
         column-count: 2;
         column-gap: 3em;
 
@@ -90,7 +90,7 @@
 
 
 @media screen and (max-width: $mediumMinScreenWidth) {
-    .container div {
+    .container section {
         column-count: 1;
     }
 
@@ -100,7 +100,7 @@
 }
 
 @media screen and (max-width: $smallMinScreenWidth) {
-    .container div p {
+    .container section p {
         text-align: justify;
     }
 
