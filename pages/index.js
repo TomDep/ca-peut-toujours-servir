@@ -29,7 +29,7 @@ export default function Home({ projects }) {
         
         <section className={styles.company}>
           <p>
-            Bienvenue chez nous ! La compagnie « Ça Peut Toujours Servir » est une compagnie émergente Lyonnaise de théâtre d'objet. Nous nous intéressons aux mouvements et à la manipulation de matières sonores, lumineuses et plastiques. Et comme on aime bien fabriquer les choses avec nos petites mains, on a conçu ce site artisanalement pour vous renseigner sur notre univers. Bon voyage !
+			Bienvenue chez nous ! La compagnie « Ça Peut Toujours Servir » est une compagnie émergente Lyonnaise de théâtre d'objet. Nous nous intéressons aux mouvements et à la manipulation de matières sonores, lumineuses et plastiques. Et comme on aime bien fabriquer les choses avec nos petites mains, on a conçu ce site artisanalement pour vous renseigner sur notre univers. Bon voyage !
           </p>
 
           <Link href='./compagnie'>
